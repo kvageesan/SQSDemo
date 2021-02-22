@@ -26,3 +26,14 @@ To keep this implementation simple, the processer reads and clears the queue.
 Message processor can be invoked through the REST endpoint{GET request}: /profile/readData. 
   On a successful completion, method returns 200 ok and on error it throws Expectation failed response.
 ```
+
+What improvements i had planed to add to existing code :
+
+- Add authentication to the REST API request
+- Add retry when accessing queue fails
+- Add poll messages when consuming it
+- Added more unit tests to be specific:
+  - Add authentication based tests
+  - Setting up AWS exception and asserting methods to see if they throw exception
+  - Mock dependancy on consumer methods and increase code coverage
+ 
